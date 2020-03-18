@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<access component="com_templateshop">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.options" title="JACTION_OPTIONS" description="JACTION_OPTIONS_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.batch" title="COM_TEMPLATESHOP_USE_BATCH" description="COM_TEMPLATESHOP_USE_BATCH_DESC" />
+		<action name="core.version" title="COM_TEMPLATESHOP_EDIT_VERSIONS" description="COM_TEMPLATESHOP_EDIT_VERSIONS_DESC" />
+		<action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+		<action name="core.delete" title="JACTION_DELETE" description="JACTION_DELETE_COMPONENT_DESC" />
+		<action name="core.edit" title="JACTION_EDIT" description="JACTION_EDIT_COMPONENT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_ACCESS_EDITSTATE_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+		<action name="core.edit.created_by" title="COM_TEMPLATESHOP_EDIT_CREATED_BY" description="COM_TEMPLATESHOP_EDIT_CREATED_BY_DESC" />
+		<action name="core.edit.created" title="COM_TEMPLATESHOP_EDIT_CREATED_DATE" description="COM_TEMPLATESHOP_EDIT_CREATED_DATE_DESC" />
+		<action name="presets.batch" title="COM_TEMPLATESHOP_PRESETSLIST_BATCH_USE" description="COM_TEMPLATESHOP_PRESETSLIST_BATCH_USE_DESC" />
+		<action name="presets.dashboard_list" title="COM_TEMPLATESHOP_PRESETSLIST_DASHBOARD_LIST" description="COM_TEMPLATESHOP_PRESETSLIST_DASHBOARD_LIST_DESC" />
+		<action name="settings.access" title="COM_TEMPLATESHOP_SETTINGS_ACCESS" description="COM_TEMPLATESHOP_SETTINGS_ACCESS_DESC" />
+		<action name="settings.dashboard_list" title="COM_TEMPLATESHOP_SETTINGS_DASHBOARD_LIST" description="COM_TEMPLATESHOP_SETTINGS_DASHBOARD_LIST_DESC" />
+		<action name="settings.save" title="COM_TEMPLATESHOP_SETTINGS_SAVE_BUTTON_ACCESS" description="COM_TEMPLATESHOP_SETTINGS_SAVE_BUTTON_ACCESS_DESC" />
+	</section>
+
+</access>

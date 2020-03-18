@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_templateshop/models/rules"
+	addfieldpath="/administrator/components/com_templateshop/models/fields"
+>
+	<fieldset name="details">
+		<field name="imagefolder" type="folderlist" default="tms_cache" label="Select a folder" directory="images" filter="" exclude="" stripext="" recursive="true" hide_none="true" hide_default="true" />
+	</fieldset>
+</form>

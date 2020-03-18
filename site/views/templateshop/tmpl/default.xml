@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout   title="COM_TEMPLATESHOP_PRESET_VIEW_DEFAULT_TITLE">
+                <message>COM_TEMPLATESHOP_PRESET_VIEW_DEFAULT_DESC</message>
+        </layout>
+        
+        <fields
+                name="params"
+               
+        >
+                <fieldset name="basic" addfieldpath="/components/com_templateshop/helpers/">
+
+                        <field
+                                name="presetid"
+                                type="presets"
+                                label="COM_TEMPLATESHOP_PRESETNAME_LABEL"
+                                description="COM_TEMPLATESHOP_PRESETNAME_DESC"
+                        />
+
+			<field
+                        	name="templatetype"
+	                        type="tmstype"
+        	                label="COM_TEMPLATESHOP_FIELD_TYPE_LABEL"
+                	        description="COM_TEMPLATESHOP_FIELD_TYPE_DESC"
+                        	class="inputbox"
+	                        required="false"
+        	                default=""
+                	/>
+	                <field
+                        	name="category"
+	                        type="tmscategory"
+        	                label="COM_TEMPLATESHOP_FIELD_CATEGORY_LABEL"
+                	        description="COM_TEMPLATESHOP_FIELD_CATEGORY_DESC"
+                        	class="inputbox"
+	                        required="false"
+        	                default=""
+                	/>
+
+		        <!-- Keywords Field. Type: Text. (car)-->
+	                <field type="text"
+	                       name="keywords"
+        	               label="COM_TEMPLATESHOP_PRESETS_KEYWORDS_LABEL"
+                	       maxlength="255"
+                       		description="COM_TEMPLATESHOP_PRESETS_KEYWORDS_DESCRIPTION"
+	                       class="text_area"
+	                       filter="STRING"
+        	               hint="COM_TEMPLATESHOP_PRESETS_KEYWORDS_HINT"
+                	       autocomplete="on" />
+
+			<field
+                        	name="blacklist"
+	                        type="text"
+        	                label="COM_TEMPLATESHOP_FIELD_BLACKLIST_LABEL"
+                	        description="COM_TEMPLATESHOP_FIELD_BLACKLIST_DESC"
+                        	class="inputbox"
+	                        required="false"
+        	                default=""
+                	/>
+
+                        <field type="list" name="allowcontentplugins" default="0" label="Allow Content Plugins" description="" >
+                                <option value="1">Yes</option>
+                                <option value="0">No</option>
+                        </field>
+
+                </fieldset>
+        </fields>
+</metadata>

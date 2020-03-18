@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form
+	addrulepath="/administrator/components/com_templateshop/models/rules"
+	addfieldpath="/components/com_templateshop/helpers"
+>
+	<fieldset name="details">
+                <!-- Default Fields.-->
+                <!-- Id Field. Type: Text (joomla)-->
+                <field name="id"
+                       type="text"
+                       class="readonly"
+                       label="JGLOBAL_FIELD_ID_LABEL"
+                       description="JGLOBAL_FIELD_ID_DESC"
+                       size="10"
+                       default="0" />
+                <!-- Date Created Field. Type: Calendar (joomla)-->
+                <field name="created"
+                       type="calendar"
+                       label="COM_TEMPLATESHOP_PRESETS_CREATED_DATE_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_CREATED_DATE_DESC"
+                       size="22"
+                       format="%Y-%m-%d %H:%M:%S"
+                       filter="user_utc" />
+                <!-- User Created Field. Type: User (joomla)-->
+                <field name="created_by"
+                       type="user"
+                       label="COM_TEMPLATESHOP_PRESETS_CREATED_BY_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_CREATED_BY_DESC" />
+                <!-- Published Field. Type: List (joomla)-->
+                <field name="published"
+                       type="list"
+                       label="JSTATUS">
+                        <option value="1">JPUBLISHED</option>
+                        <option value="0">JUNPUBLISHED</option>
+                        <option value="2">JARCHIVED</option>
+                        <option value="-2">JTRASHED</option>
+                </field>
+                <!-- Date Modified Field. Type: Calendar (joomla)-->
+                <field name="modified"
+                       type="calendar"
+                       class="readonly"
+                       label="COM_TEMPLATESHOP_PRESETS_MODIFIED_DATE_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_MODIFIED_DATE_DESC"
+                       size="22"
+                       readonly="true"
+                       format="%Y-%m-%d %H:%M:%S"
+                       filter="user_utc" />
+                <!-- User Modified Field. Type: User (joomla)-->
+                <field name="modified_by"
+                       type="user"
+                       label="COM_TEMPLATESHOP_PRESETS_MODIFIED_BY_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_MODIFIED_BY_DESC"
+                       class="readonly"
+                       readonly="true"
+                       filter="unset" />
+                <!-- Ordering Field. Type: Numbers (joomla)-->
+                <field name="ordering"
+                       type="number"
+                       class="inputbox validate-ordering"
+                       label="COM_TEMPLATESHOP_PRESETS_ORDERING_LABEL"
+                       description=""
+                       default="0"
+                       size="6"
+                       required="false" />
+                <!-- Version Field. Type: Text (joomla)-->
+                <field name="version"
+                       type="text"
+                       class="readonly"
+                       label="COM_TEMPLATESHOP_PRESETS_VERSION_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_VERSION_DESC"
+                       size="6"
+                       readonly="true"
+                       filter="unset" />
+                <!-- Dynamic Fields.-->
+                <!-- Presetname Field. Type: Text. (joomla)-->
+                <field type="text"
+                       name="presetname"
+                       label="COM_TEMPLATESHOP_PRESETS_PRESETNAME_LABEL"
+                       maxlength="60"
+                       description="JFIELD_TITLE_DESC"
+                       class="text_area"
+                       required="true"
+                       filter="STRING"
+                       message="COM_TEMPLATESHOP_PRESETS_PRESETNAME_MESSAGE"
+                       hint="COM_TEMPLATESHOP_PRESETS_PRESETNAME_HINT"
+                       autocomplete="on" />
+                <!-- Itemlayout Field. Type: Textarea. (joomla)-->
+                <field type="textarea"
+                       name="itemlayout"
+                       label="COM_TEMPLATESHOP_PRESETS_ITEMLAYOUT_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_ITEMLAYOUT_DESCRIPTION"
+                       message="COM_TEMPLATESHOP_PRESETS_ITEMLAYOUT_MESSAGE"
+                       class="text_area text_area_full"
+                       filter="raw"
+                       required="false" />
+                <!-- Layout Field. Type: Textarea. (joomla)-->
+                <field type="textarea"
+                       name="layout"
+                       label="COM_TEMPLATESHOP_PRESETS_LAYOUT_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_LAYOUT_DESCRIPTION"
+                       message="COM_TEMPLATESHOP_PRESETS_LAYOUT_MESSAGE"
+                       class="text_area text_area_full"
+                       filter="raw"
+                       required="false" />
+                <!-- Currency Field. Type: List. (joomla)-->
+                <field type="list"
+                       name="currency"
+                       label="COM_TEMPLATESHOP_PRESETS_CURRENCY_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_CURRENCY_DESCRIPTION"
+                       class="list_class"
+                       multiple="false"
+                       default="0">
+                        <!-- Option Set.-->
+                        <option value="0">COM_TEMPLATESHOP_PRESETS_USD_TEMPLATES_PRICES_WILL_BE_IN_US_DOLLARS</option>
+                        <option value=" 1">COM_TEMPLATESHOP_PRESETS_EUR_TEMPLATES_PRICES_WILL_BE_IN_EUROS</option>
+                        <option value=" 2">COM_TEMPLATESHOP_PRESETS_CAD_TEMPLATES_PRICES_WILL_BE_IN_CANADIAN_DOLLARS</option>
+                        <option value=" 3">COM_TEMPLATESHOP_PRESETS_GBP_TEMPLATES_PRICES_WILL_BE_IN_BRITISH_POUNDS_STERLING</option>
+                        <option value=" 4">COM_TEMPLATESHOP_PRESETS_JPY_TEMPLATES_PRICES_WILL_BE_IN_JAPANESE_YEN</option>
+                        <option value=" 5">COM_TEMPLATESHOP_PRESETS_AUD_TEMPLATES_PRICES_WILL_BE_IN_AUSTRALIAN_DOLLARS</option>
+                </field>
+
+
+                <field
+                        name="sortby"
+                        type="list"
+                        label="Sort By"
+                        description="If this parameter exists, records will be sorted by a certain attribute. By default, records are sorted by a template number. Acceptable values:"
+                        class="inputbox"
+                        default="0"
+                >
+                        <option value="0">Number - sort by a template number</option>
+                        <option value="1">Date - sort by date of addition</option>
+                        <option value="2">Price - sort by price</option>
+                </field>
+
+
+                <!-- Orderdirection Field. Type: List. (joomla)-->
+                <field type="list"
+                       name="orderdirection"
+                       label="COM_TEMPLATESHOP_PRESETS_ORDERDIRECTION_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_ORDERDIRECTION_DESCRIPTION"
+                       class="list_class"
+                       default="0">
+                        <!-- Option Set.-->
+                        <option value="0">COM_TEMPLATESHOP_PRESETS_ASCENDING_ORDER</option>
+                        <option value="1">COM_TEMPLATESHOP_PRESETS_DESCENDING_ORDER</option>
+                </field>
+
+
+		<field
+                        	name="templatetype"
+	                        type="tmstype"
+        	                label="COM_TEMPLATESHOP_FIELD_TYPE_LABEL"
+                	        description="COM_TEMPLATESHOP_FIELD_TYPE_DESC"
+                        	class="inputbox"
+	                        required="false"
+        	                default=""
+               	/>
+
+
+                <!-- Keywords Field. Type: Text. (joomla)-->
+
+
+                <field type="text"
+                       name="keywords"
+                       label="COM_TEMPLATESHOP_PRESETS_KEYWORDS_LABEL"
+                       maxlength="255"
+                       description="COM_TEMPLATESHOP_PRESETS_KEYWORDS_DESCRIPTION"
+                       class="text_area"
+                       filter="STRING"
+                       hint="COM_TEMPLATESHOP_PRESETS_KEYWORDS_HINT"
+                       autocomplete="on" />
+
+                <!-- Filter Field. Type: List. (joomla)-->
+                <field type="list"
+                       name="filter"
+                       label="COM_TEMPLATESHOP_PRESETS_FILTER_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_FILTER_DESCRIPTION"
+                       class="list_class"
+                       multiple="false"
+                       required="true"
+                       default="0">
+                        <!-- Option Set.-->
+                        <option value="0">COM_TEMPLATESHOP_PRESETS_ALL_TEMPLATES_EXCEPT_ADULT_WEBSITE_TEMPLATES</option>
+                        <option value="1">COM_TEMPLATESHOP_PRESETS_WEBSITE_TEMPLATES_ONLY_HOSTING_WEBSITE_TEMPLATES_INCLUDED</option>
+                        <option value="2">COM_TEMPLATESHOP_PRESETS_HOSTING_WEBSITE_TEMPLATES_ONLY</option>
+                        <option value="3">COM_TEMPLATESHOP_PRESETS_FLASH_INTRO_TEMPLATES_ONLY</option>
+                        <option value="4">COM_TEMPLATESHOP_PRESETS_ADULT_WEBSITE_TEMPLATES_ONLY</option>
+                        <option value="5">COM_TEMPLATESHOP_PRESETS_UNIQUE_LOGO_TEMPLATES_ONLY</option>
+                        <option value="6">COM_TEMPLATESHOP_PRESETS_NON_UNIQUE_LOGO_TEMPLATES_ONLY</option>
+                        <option value="7">COM_TEMPLATESHOP_PRESETS_UNIQUE_CORPORATE_IDENTITY_PACKAGES_ONLY</option>
+                        <option value="8">COM_TEMPLATESHOP_PRESETS_NONUNIQUE_CORPORATE_IDENTITY_PACKAGES_ONLY</option>
+                </field>
+                <!-- Lastadded Field. Type: Radio. (joomla)-->
+                <field type="radio"
+                       name="lastadded"
+                       label="COM_TEMPLATESHOP_PRESETS_LASTADDED_LABEL"
+                       description="COM_TEMPLATESHOP_PRESETS_LASTADDED_DESCRIPTION"
+                       class="btn-group btn-group-yesno"
+                       default="0">
+                        <!-- Option Set.-->
+                        <option value="1">COM_TEMPLATESHOP_PRESETS_YES</option>
+                        <option value="0">COM_TEMPLATESHOP_PRESETS_NO</option>
+                </field>
+        </fieldset>
+	
+	<!-- Access Control Fields. -->
+	<fieldset name="accesscontrol">
+		<!-- Asset Id Field. Type: Hidden (joomla) -->
+		<field
+			name="asset_id"
+			type="hidden"
+			filter="unset"
+		/>
+		<!-- Rules Field. Type: Rules (joomla) -->
+		<field
+			name="rules"
+			type="rules"
+			label="Permissions in relation to this presets"
+			translate_label="false"
+			filter="rules"
+			validate="rules"
+			class="inputbox"
+			component="com_templateshop"
+			section="presets"
+		/>
+	</fieldset>
+</form>
