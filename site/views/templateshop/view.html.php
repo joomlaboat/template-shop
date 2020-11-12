@@ -1,8 +1,7 @@
 <?php
 /**
  * TEMPLATESHOP Joomla! 3.0 Native Component
- * @version 1.1.5
- * @author Ivan Komlev< <support@joomlaboat.com>
+ * @author Ivan Komlev <support@joomlaboat.com>
  * @link http://www.joomlaboat.com
  * @GNU General Public License
  **/
@@ -37,6 +36,3 @@ jimport('joomla.application.component.view');
                         parent::display($tpl);
                 }
         }
-
-
-?>
