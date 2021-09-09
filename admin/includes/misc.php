@@ -129,8 +129,7 @@ class TMSMisc
 				$query = 'SELECT value FROM #__templateshop_settings WHERE `option`="'.$option.'" LIMIT 1';
 				
 				$db->setQuery($query);
-				if (!$db->query())    die( $db->stderr());
-					$values=$db->loadAssocList();
+				$values=$db->loadAssocList();
 				
 				if(count($values)==0)
 								return "";
@@ -154,7 +153,7 @@ class TMSMisc
 		ON DUPLICATE KEY UPDATE `value`='.$db->Quote($value);
 
 		$db->setQuery($query);
-		if (!$db->query())    die ( $db->stderr());
+		$db->execute();
 	}
 	
 	

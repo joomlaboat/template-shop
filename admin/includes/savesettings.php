@@ -56,7 +56,7 @@ defined('_JEXEC') or die('Restricted access');
 			{
 				
 				$db->setQuery($q);
-				if (!$db->query())    die ( $db->stderr());
+				$db->execute();
 			}
 			
 			

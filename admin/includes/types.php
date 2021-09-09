@@ -23,7 +23,6 @@ class TMSTypes
 				$query->group('`type`');
 				$query->order('`type` ASC');
                 $db->setQuery((string)$query);
-				if (!$db->query())    die( $db->stderr());
 				
                 $records = $db->loadObjectList();
                 return $records;

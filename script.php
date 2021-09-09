@@ -171,8 +171,8 @@ class com_templateshopInstallerScript
 			
 			$db = JFactory::getDBO();
                 
-            $db->setQuery($query);
-			if (!$db->query())    die ( $db->stderr());
+		        $db->setQuery($query);
+			$db->execute();
 			
 			echo '<p>Default preset added.</p>';
 		}
@@ -196,7 +196,7 @@ class com_templateshopInstallerScript
 				{
 					$query='INSERT INTO `#__templateshop_templates`'.$q;
 					$db->setQuery($query);
-					if (!$db->query())    die ( $db->stderr());
+					$db->execute();
 				}
 			}
 			

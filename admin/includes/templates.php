@@ -97,7 +97,7 @@ class TMSTemplates
                 $query->where(implode(' AND ',$where));
                 
                 $db->setQuery((string)$query);
-                $replyAG = $db->query();
+
                 $total_templates=$db->getNumRows();
                 
                 $jinput = JFactory::getApplication()->input;
@@ -281,7 +281,7 @@ class TMSTemplates
           
             $query='INSERT #__templateshop_templates SET '.implode(',',$sets).';';
             $db->setQuery($query);
-            if (!$db->query())    die ( $db->stderr());
+		$db->execute();
         }
         
         
@@ -384,7 +384,7 @@ class TMSTemplates
             $query='UPDATE #__templateshop_templates SET '.implode(',',$sets).' WHERE id='.$template_number.';';
             
             $db->setQuery($query);
-            if (!$db->query())    die ( $db->stderr());
+		$db->execute();
         }
         
         public static function getIncompleteTemplates($keywords='',$category=null)

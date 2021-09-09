@@ -41,7 +41,7 @@ function TemplateShopBuildRoute(&$query) {
 		     $db = JFactory::getDBO();
 		
 		     $db->setQuery('SELECT `alias` FROM `#__templateshop_videos` WHERE `videoid`="'.$videoid.'" LIMIT 1');
-		     if (!$db->query())    die ('yg router.php 1 err:'. $db->stderr());
+
 		     $rows = $db->loadObjectList();
 		     
 		     if(count($rows)!=0)
@@ -74,7 +74,6 @@ function TemplateShopParseRoute($segments)
 	      $db = JFactory::getDBO();
 	   	
 	      $db->setQuery('SELECT `videoid` FROM `#__templateshop_videos` WHERE `alias`="'.$alias.'" LIMIT 1');
-	      if (!$db->query())    die ('yg router.php 2 err:'. $db->stderr());
 	   
 	      $rows = $db->loadObjectList();
 	   
@@ -89,5 +88,3 @@ function TemplateShopParseRoute($segments)
        }
        return $vars;
 }
-
-?>
