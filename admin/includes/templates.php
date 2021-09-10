@@ -97,7 +97,7 @@ class TMSTemplates
                 $query->where(implode(' AND ',$where));
                 
                 $db->setQuery((string)$query);
-
+		$db->execute()
                 $total_templates=$db->getNumRows();
                 
                 $jinput = JFactory::getApplication()->input;
