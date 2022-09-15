@@ -33,7 +33,7 @@ require_once('_tagsets.php');
 
 $onPageLoads=array();
 ?>
-<script type="text/javascript">
+<script>
 	// waiting spinner
 	var outerDiv = jQuery('body');
 	jQuery('<div id="loading"></div>')

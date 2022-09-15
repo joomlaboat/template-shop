@@ -144,7 +144,7 @@ $document->addCustomTag('<link rel="stylesheet" href="/administrator/components/
 	
 		
 		$result='
-	<script type="text/javascript">
+	<script>
 	
 	define_cmLayoutEditor();
 	

@@ -14,8 +14,8 @@ class TMSPagination
 	public static function getPagination($limit,$numerofpagesperbar,$total,$presetid)
 	{
 		$document = JFactory::getDocument();
-		$document->addCustomTag('<script type="text/javascript" src="/media/com_templateshop/js/ajax.js"></script>');
-		$document->addCustomTag('<script type="text/javascript" src="/media/com_templateshop/js/pagination.js"></script>');
+		$document->addCustomTag('<script src="/media/com_templateshop/js/ajax.js"></script>');
+		$document->addCustomTag('<script src="/media/com_templateshop/js/pagination.js"></script>');
 		
 		
 		$jinput = JFactory::getApplication()->input;
