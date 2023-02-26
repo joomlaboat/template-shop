@@ -8,7 +8,7 @@
 	@created		30th May, 2018
 	@package		Template Shop
 	@subpackage		script.php
-	@author			Ivan Komlev <http://joomlaboat.com>	
+	@author			Ivan Komlev <https://joomlaboat.com>	
 	@copyright		Copyright (C) 2018. All Rights Reserved
 	@license		GNU/GPL Version 2 or later - http://www.gnu.org/licenses/gpl-2.0.html
   ____  _____  _____  __  __  __      __       ___  _____  __  __  ____  _____  _  _  ____  _  _  ____ 
